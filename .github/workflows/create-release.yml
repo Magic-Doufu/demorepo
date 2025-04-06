@@ -17,16 +17,6 @@ jobs:
         uses: actions/checkout@v3
       # 現有的 GitHub 官方 Action。將專案程式碼 Checkout，接著可進行測試，部署等。
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      # 建立 Node.js 環境，因為 semantic-release 通常依賴 Node.js。
-
-      - name: Install dependencies
-        run: npm install
-      # npm install 以執行 semantic-release。
-
       - name: Run Semantic Release
         uses: cycjimmy/semantic-release-action@v4
         env:
@@ -40,7 +30,7 @@ jobs:
               "@semantic-release/changelog",
               "@semantic-release/github"
             ]
-    # @semantic-release/commit-analyzer：分析 commit message or PR 標題來決定版本號（major, minor, patch）。
+  # @semantic-release/commit-analyzer：分析 commit message or PR 標題來決定版本號（major, minor, patch）。
 	# @semantic-release/release-notes-generator：生成 Release 說明，可以根據 PR 標題來分類。
 	# @semantic-release/changelog：更新 CHANGELOG.md 文件，並將每個 PR 歸類到相應的 Release 說明中。
 	# @semantic-release/github：自動在 GitHub 上創一個 Release。
