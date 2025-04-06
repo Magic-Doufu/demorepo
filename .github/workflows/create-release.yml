@@ -34,3 +34,6 @@ jobs:
 	# @semantic-release/release-notes-generator：生成 Release 說明，可以根據 PR 標題來分類。
 	# @semantic-release/changelog：更新 CHANGELOG.md 文件，並將每個 PR 歸類到相應的 Release 說明中。
 	# @semantic-release/github：自動在 GitHub 上創一個 Release。
+env:
+  DEBUG: semantic-release:*
+# DEBUG：啟用 semantic-release 的 debug 模式，方便除錯。
