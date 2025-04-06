@@ -11,7 +11,7 @@ on:
 
 jobs:
   release:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'
       # 建立 Node.js 環境，因為 semantic-release 通常依賴 Node.js。
 
       - name: Install dependencies
@@ -28,7 +28,7 @@ jobs:
       # npm install 以執行 semantic-release。
 
       - name: Run Semantic Release
-        uses: cycjimmy/semantic-release-action@latest
+        uses: cycjimmy/semantic-release-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # 使用 semantic-release 自動管理版本號和創 GitHub Release。  
