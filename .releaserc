@@ -41,7 +41,7 @@
       "@semantic-release/github",
       {
         "release": {
-          "name": "Release version ${nextRelease.version}"
+          "name": "Release version ${version}"
         }
       }
     ]
