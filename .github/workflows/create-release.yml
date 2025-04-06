@@ -28,7 +28,7 @@ jobs:
       # npm install 以執行 semantic-release。
 
       - name: Run Semantic Release
-        uses: semantic-release/semantic-release@v24
+        uses: cycjimmy/semantic-release-action@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # 使用 semantic-release 自動管理版本號和創 GitHub Release。  
