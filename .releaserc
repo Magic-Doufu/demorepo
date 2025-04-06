@@ -1,6 +1,6 @@
 {
   "branches":["main"],
-  "extra_plugins": [
+  "plugins": [
     [
       "@semantic-release/commit-analyzer",
       {

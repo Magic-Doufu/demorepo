@@ -21,15 +21,7 @@ jobs:
         uses: cycjimmy/semantic-release-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # 使用 semantic-release 自動管理版本號和創 GitHub Release。  
-        with:
-          plugins: |
-            [
-              "@semantic-release/commit-analyzer",
-              "@semantic-release/release-notes-generator",
-              "@semantic-release/changelog",
-              "@semantic-release/github"
-            ]
+      # Removed invalid 'plugins' input. Plugin configuration should be moved to a .releaserc file.
   # @semantic-release/commit-analyzer：分析 commit message or PR 標題來決定版本號（major, minor, patch）。
 	# @semantic-release/release-notes-generator：生成 Release 說明，可以根據 PR 標題來分類。
 	# @semantic-release/changelog：更新 CHANGELOG.md 文件，並將每個 PR 歸類到相應的 Release 說明中。
