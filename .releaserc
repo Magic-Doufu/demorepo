@@ -6,6 +6,7 @@
       {
         "preset": "angular",
         "releaseRules": [
+          { "type": "major", "release": "major" },
           { "type": "feat", "release": "minor" },
           { "type": "fix", "release": "patch" },
           { "type": "docs", "release": false },
@@ -23,6 +24,7 @@
         "preset": "angular",
         "presetConfig": {
           "types": [
+            { "type": "major", "release": "major" },
             { "type": "feat", "section": "Features" },
             { "type": "fix", "section": "Fixes" },
             { "type": "refactor", "section": "Refactors" },
